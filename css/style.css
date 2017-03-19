@@ -1,0 +1,289 @@
+
+p {
+    color: blue;
+    font-size: 24px;
+}
+
+header {
+    width: 1000px;
+    height: 140px;
+    background-color: #ffffff;
+}
+
+
+/* img在header中的写法*/
+
+header img {
+    margin-top: 40px;
+}
+
+
+/*id 为test的标签 id是唯一的,不能重复, class可以重复*/
+
+#test {
+    width: 92px;
+    height: 20px;
+    background-image: url('img/logo.png');
+}
+
+
+/*.warpper 表示标签的class=warpper*/
+
+.warpper {
+    width: 960px;
+    margin: 0 auto;
+}
+header ul > li{
+    display: inline-block;
+}
+
+a {
+    color: #080;
+    text-decoration: none;
+}
+
+.index-intro {
+    width: 100%;
+    /*background-color: red;*/
+    padding: 80px, 0px;
+}
+
+.index-intro > .warpper {
+    background-color:  green;
+    width: 100%;
+}
+.index-intro > .warpper >h2 {
+    font-size: 22%;
+    font-family: Lato;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.index-intro > .warpper > p {
+    font-weight: 800;
+    font-family: Lato;
+    text-transform: lowercase;
+    text-align: center;
+    line-height: 22px;
+    margin: 20px;
+}
+
+.video-into {
+    font-size: 22px;
+    /*background-color: red;*/
+
+}
+
+.news-img{
+    float: left;
+    width: 100%;
+    height:20px;
+    background-image: url('img/cat.jpg');
+    background-color: #000000;
+    /*设置变化的的属性的时间*/
+    transition-property: all;
+    transition-duration: 1000ms;
+    /*设置变换的样式*/
+    transition-timing-function: ease-in-out;
+    /*设置变换的延时时间*/
+    transition-delay: 5s;
+
+    /**适配浏览器*/
+   /* -webkit-transition: all 1000ms ease-in-out 5s;
+    -moz-transition: all 1000ms ease-in-out 5s;
+    -ms-transition: all 1000ms ease-in-out 5s;
+    -o-transition: all 1000ms ease-in-out 5s;
+    transition: all 1000ms ease-in-out 5s;
+*/
+}
+
+.index-news {
+    font-size: 44%;
+    font-family: Lato;
+    font-weight: 800;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top:10px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.news-img:hover{
+    background-image: url('img/cat.jpg');
+}
+
+.index-intro article:hover .index-news p {
+    /*color:red;*/
+    font-size: 30px;
+}
+
+.table-box {
+    width: 100%;
+     padding:80px 90px;
+     background-color: #ffffff;
+ }
+
+.table-box  table{
+      width: 100%;
+  }
+
+.table-box  table th{
+     text-align: left;
+ }
+
+.table-box  table td{
+     background-color: #cccccc;
+     margin-top: 2px;
+    border-right:2px solid #000000;
+ }
+
+.table-box  table tr {
+    border-top: 2px solid #ffffff;
+}
+
+.form-box {
+    width: 100%;
+    padding: 80px 0px;
+    background-color: #ffffff;
+}
+
+.form-box form input {
+    width: 40%;
+    height: 30px;
+    margin-bottom: 40px;
+    padding: 0px 0.5%;
+    border: 1px solid springgreen;
+}
+
+.form-radio {
+    clear: both;;
+    /* !important 表示要优先设置*/
+    width: 1% !important;
+    height: 10px;
+    margin-bottom: 4px;
+    padding: 0px 0.5%;
+    border: 1px solid springgreen;
+}
+
+.form-box form p {
+   font-size: 16px;
+    color: #282828;
+    font-family: Lato;
+    float: left;
+    padding-top: 10px;
+}
+
+.form-box form textarea {
+    clear: both;
+    font-size: 16px;
+    color: #282828;
+    font-family: Lato;
+    width: 60%;
+    height: 300px;
+    margin-bottom: 40px;
+    padding: 6px 0.5%;
+    resize: vertical; /*设置textarea拉伸时的方向*/
+}
+
+.form-box button {
+    width: 80px;
+    height: 30px;
+    background-color: orange;
+    border: none;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: Lato;
+    text-transform: uppercase;
+}
+
+/*footer*/
+footer {
+    width: 100%;;
+    background-color: #222;
+    padding: 0px 0.5%;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: Lato;
+}
+
+.form-box-device {
+    display: none;
+}
+
+/*Responsive design in CSS*/
+@media only screen and (max-width: 1768px) and (min-width: 768px) and(orientation: portrait){
+    .index-intro p {
+        font-weight:400;
+        font-size: 22px;
+    }
+
+    .index-intro > .warpper >h2 {
+        font-weight: 700;
+        font-size: 33px;
+    }
+    .form-box-device {
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 1768px) and (min-width: 768px) and(orientation: landscape){
+    .index-intro p {
+        font-weight:400;
+        font-size: 22px;
+    }
+
+    .index-intro > .warpper >h2 {
+        font-weight: 700;
+        font-size: 33px;
+        color: red;
+    }
+    .form-box-device {
+        display: block;
+    }
+}
+
+.gallery-box {
+    overflow: hidden;
+    /*外间距*/
+    padding: 80px 0px;
+}
+
+.img-single{
+    width: 110px;
+    height: 80px;
+    /*内间距*/
+    margin: 10px 5px;
+    float: left;
+    position: relative;
+    top: 20px;
+}
+
+.img-single img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0px;
+    bottom: 0px;
+    left: 0px;
+    right:0px;
+}
+
+.img-single:hover{
+   z-index: 1000;
+}
+
+.img-single img:hover {
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    top:-5%;
+    left: -5%;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -ms-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
